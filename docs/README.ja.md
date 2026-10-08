@@ -10,13 +10,13 @@
 
 <p align="center">
   <a href="https://github.com/exatrines/Oracle/releases/latest">
-    <img src="https://img.shields.io/github/v/release/exatrines/Oracle?label=Release&amp;labelColor=F4A7C5&amp;color=FFFFFF&amp;style=flat" alt="Release">
+    <img src="https://img.shields.io/github/v/release/exatrines/Oracle?label=Release&amp;labelColor=F280B6&amp;color=FFFFFF&amp;style=flat&amp;sort=date&amp;display_name=tag" alt="Release">
   </a>
   <a href="../CHANGELOG.md">
-    <img src="https://img.shields.io/badge/Changelog-view-FFFFFF?labelColor=F4A7C5&amp;style=flat" alt="Changelog">
+    <img src="https://img.shields.io/badge/Changelog-view-FFFFFF?labelColor=F280B6&amp;style=flat" alt="Changelog">
   </a>
   <a href="../LICENSE">
-    <img src="https://img.shields.io/badge/License-AGPL--3.0--or--later-FFFFFF?labelColor=F4A7C5&amp;style=flat" alt="AGPL-3.0-or-later">
+    <img src="https://img.shields.io/badge/License-AGPL--3.0--or--later-FFFFFF?labelColor=F280B6&amp;style=flat" alt="AGPL-3.0-or-later">
   </a>
 </p>
 
