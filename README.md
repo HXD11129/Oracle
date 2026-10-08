@@ -4,8 +4,6 @@
 
 <h1 align="center">Oracle</h1>
 
-<p align="center">Duty timeline cues for mitigation and skill timing.</p>
-
 <p align="center">
   English | <a href="docs/README.ja.md">日本語</a>
 </p>
