@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
-- README layout: centered plugin icon, Release / Changelog / License badges, and a submodule init step for developers
+- README layout: centered plugin icon, English | Japanese switch, pink and white Release / Changelog / License badges, overlay combo hero, and a submodule init step for developers
 - Restored the full GNU AGPL v3 license text
 
 ## [1.2.3] - 2026-09-25
