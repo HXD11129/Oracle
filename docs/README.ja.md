@@ -1,8 +1,30 @@
-# Oracle
+<p align="center">
+  <img src="../Oracle/Data/plugin-icon.png" alt="Oracle アイコン" width="128" height="128">
+</p>
 
-[English](../README.md)
+<h1 align="center">Oracle</h1>
 
-![Major オーバーレイとホットバーのアイコンハイライト](screenshots/major-hotbar-highlight-730x380.png)
+<p align="center">コンテンツ中に、使うスキルとタイミングを表示します。</p>
+
+<p align="center">
+  <a href="../README.md">English</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/exatrines/Oracle/releases/latest">
+    <img src="https://img.shields.io/github/v/release/exatrines/Oracle?style=for-the-badge&label=Release" alt="Release">
+  </a>
+  <a href="../CHANGELOG.md">
+    <img src="https://img.shields.io/badge/Changelog-Keep%20a%20Changelog-informational?style=for-the-badge" alt="Changelog">
+  </a>
+  <a href="../LICENSE">
+    <img src="https://img.shields.io/badge/License-AGPL--3.0--or--later-blue?style=for-the-badge" alt="AGPL-3.0-or-later">
+  </a>
+</p>
+
+<p align="center">
+  <img src="screenshots/major-hotbar-highlight-730x380.png" alt="Major オーバーレイとホットバーのアイコンハイライト">
+</p>
 
 Oracle は、コンテンツ中に「どのスキルを、いつ使うか」を表示する Dalamud プラグインです。
 
@@ -21,12 +43,12 @@ https://raw.githubusercontent.com/exatrines/DalamudPlugins/refs/heads/main/plugi
 
 ## 機能
 
-- どのスキルをいつ使うかタイムライン化できます
-- FFLogsのレポートからスキルを読み込めます
-- 戦闘を記録して、タイムラインに変換できます
-- コンテンツ開始時に、対応するタイムラインを自動で読み込みます
-- これから使うスキルをリストやスクロールするアイコンで確認できます
-- 使うタイミングに合わせてホットバーのスキルを点灯させます
+- **タイムライン** — どのスキルをいつ使うかを設定できます
+- **FFLogs 取り込み** — レポートから自分のスキルを読み込めます
+- **AutoRecord** — 戦闘を記録してタイムラインにできます
+- **Auto Load** — コンテンツ開始時に対応するタイムラインを読み込みます
+- **オーバーレイ** — これから使うスキルをリストやスクロールするアイコンで確認できます
+- **ホットバーハイライト** — 使うタイミングに合わせてホットバーのスキルを点灯させます
 
 ## コマンド
 
@@ -46,12 +68,13 @@ https://raw.githubusercontent.com/exatrines/DalamudPlugins/refs/heads/main/plugi
 
 ## 開発者向け
 
-1. ビルド: `dotnet build Oracle.sln -c Release -p:Platform=x64`
-2. Dalamud の **dev plugin** に `Oracle/bin/Release/` を指定する
-3. プラグインインストーラ（dev）で **Oracle** を有効にする
+1. `git submodule update --init --recursive`
+2. ビルド: `dotnet build Oracle.sln -c Release -p:Platform=x64`
+3. Dalamud の **dev plugin** に `Oracle/bin/Release/` を指定する
+4. プラグインインストーラ（dev）で **Oracle** を有効にする
 
 共有 UI キットの [MirageUI](https://github.com/exatrines/MirageUI) を git サブモジュールとして同梱しています。
 
-## ライセンス
+## コントリビューション
 
-[AGPL-3.0-or-later](../LICENSE)
+コントリビューションは大歓迎です！[貢献ガイド](../CONTRIBUTING.md)をご覧ください。

@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Added `CONTRIBUTING.md`, synced from the shared contributing guide
+
+### Changed
+
+- README layout: centered plugin icon, Release / Changelog / License badges, and a submodule init step for developers
+- Restored the full GNU AGPL v3 license text
+
 ## [1.2.3] - 2026-09-25
 
 ### Changed

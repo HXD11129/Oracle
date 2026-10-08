@@ -1,8 +1,30 @@
-# Oracle
+<p align="center">
+  <img src="Oracle/Data/plugin-icon.png" alt="Oracle icon" width="128" height="128">
+</p>
 
-[日本語](docs/README.ja.md)
+<h1 align="center">Oracle</h1>
 
-![Major overlay and hotbar icon highlight](docs/screenshots/major-hotbar-highlight-730x380.png)
+<p align="center">Duty timeline cues for mitigation and skill timing.</p>
+
+<p align="center">
+  <a href="docs/README.ja.md">日本語</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/exatrines/Oracle/releases/latest">
+    <img src="https://img.shields.io/github/v/release/exatrines/Oracle?style=for-the-badge&label=Release" alt="Release">
+  </a>
+  <a href="CHANGELOG.md">
+    <img src="https://img.shields.io/badge/Changelog-Keep%20a%20Changelog-informational?style=for-the-badge" alt="Changelog">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-AGPL--3.0--or--later-blue?style=for-the-badge" alt="AGPL-3.0-or-later">
+  </a>
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/major-hotbar-highlight-730x380.png" alt="Major overlay and hotbar icon highlight">
+</p>
 
 Oracle is a Dalamud plugin that shows duty timeline cues—so you know which skill to use, and when.
 
@@ -21,12 +43,12 @@ https://raw.githubusercontent.com/exatrines/DalamudPlugins/refs/heads/main/plugi
 
 ## Features
 
-- Set up a timeline of which skills to use and when
-- Import your skills from an FFLogs report
-- Record a pull in-game and turn it into a timeline
-- Automatically load a timeline that matches the duty when it starts
-- See upcoming skills as a list or a scrolling row of icons
-- Light up the skill on your hotbar when it's time to use it
+- **Timeline** — Set up which skills to use and when
+- **FFLogs import** — Import your skills from a report
+- **AutoRecord** — Record a pull in-game and turn it into a timeline
+- **Auto Load** — Load a matching timeline when the duty starts
+- **Overlays** — See upcoming skills as a list or a scrolling row of icons
+- **Hotbar highlight** — Light up the skill on your hotbar when it's time to use it
 
 ## Commands
 
@@ -46,12 +68,13 @@ https://raw.githubusercontent.com/exatrines/DalamudPlugins/refs/heads/main/plugi
 
 ## For developers
 
-1. Build: `dotnet build Oracle.sln -c Release -p:Platform=x64`
-2. Point Dalamud’s **dev plugin** path at `Oracle/bin/Release/`
-3. Enable **Oracle** in the plugin installer (dev)
+1. `git submodule update --init --recursive`
+2. Build: `dotnet build Oracle.sln -c Release -p:Platform=x64`
+3. Point Dalamud’s **dev plugin** path at `Oracle/bin/Release/`
+4. Enable **Oracle** in the plugin installer (dev)
 
 [MirageUI](https://github.com/exatrines/MirageUI) is included as a git submodule for the shared UI kit.
 
-## License
+## Contributing
 
-[AGPL-3.0-or-later](LICENSE)
+Contributions are always welcome! Please see the [contribution guide](CONTRIBUTING.md).
