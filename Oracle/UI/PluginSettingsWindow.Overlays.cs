@@ -11,6 +11,20 @@ internal sealed partial class PluginSettingsWindow
     private static void DrawTimelineSettings()
     {
         MirageUi.Header(I18n.Get("settings.header.timeline"));
+        var timelineScalePercent = C.TimelineScale * 100f;
+        if (MirageUi.SliderFloat(
+                "Timeline Scale (%)",
+                ref timelineScalePercent,
+                50f,
+                200f,
+                "%.0f%%"))
+        {
+            C.TimelineScale = Math.Clamp(
+                timelineScalePercent / 100f,
+                0.5f,
+                2f);
+            C.Save();
+        }
 
         var showOverlay = C.ShowOverlay;
         if (MirageUi.Checkbox(I18n.Get("settings.checkbox.enable"), ref showOverlay))
