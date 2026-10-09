@@ -21,6 +21,7 @@ public sealed class Configuration : IPluginConfiguration
     public bool OverlayClickThrough { get; set; }
     public int OverlayMaxRows { get; set; } = 8;
     public float LookaheadSeconds { get; set; } = 30f;
+    public float TimelineScale { get; set; } = 1f;
 
     // --- Action highlight (shared by Timeline / Major / Hotbar) ---
 
