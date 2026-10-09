@@ -1,0 +1,63 @@
+name: Build Oracle
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout source and submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Download Dalamud libraries
+        shell: pwsh
+        run: |
+          $zip = Join-Path $env:RUNNER_TEMP "dalamud.zip"
+          $lib = Join-Path $env:RUNNER_TEMP "dalamud"
+
+          Invoke-WebRequest `
+            -Uri "https://goatcorp.github.io/dalamud-distrib/latest.zip" `
+            -OutFile $zip
+
+          Expand-Archive -Path $zip -DestinationPath $lib -Force
+
+          $dll = Get-ChildItem -Path $lib -Filter Dalamud.dll -Recurse |
+            Select-Object -First 1
+
+          if (-not $dll) {
+            throw "Dalamud.dll was not found in the downloaded archive."
+          }
+
+          "DALAMUD_LIB_PATH=$($dll.Directory.FullName)" |
+            Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+      - name: Build plugin
+        shell: pwsh
+        run: |
+          dotnet build Oracle/Oracle.csproj `
+            --configuration Release `
+            "-p:Platform=x64" `
+            "-p:DalamudLibPath=$env:DALAMUD_LIB_PATH/"
+
+      - name: Upload plugin files
+        uses: actions/upload-artifact@v4
+        with:
+          name: Oracle-Release
+          path: Oracle/bin/Release/
+          if-no-files-found: error
+          retention-days: 14
